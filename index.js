@@ -1,5 +1,8 @@
-/*choise arraw that has 3 elements of paper, rock and scissors */
+
+let humanScore=0;
+let computerScore=0;
 const choise=["paper", "rock", "scissors"];
+
 
 /* function to generate randomly paper, rock or scissors*/ 
 function getComputerChoice(){
