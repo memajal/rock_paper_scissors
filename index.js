@@ -18,10 +18,8 @@ function getHumanChoice(){
     let humanChoise= prompt
         ("Enter one of the options:paper, rock, scissors", 
         "paper,rock,scissors");
-
-        return humanChoise.toLowerCase();
-
         
+        return humanChoise.toLowerCase();       
 }
      
 function playRound(computerChoise, humanChoise){
@@ -47,7 +45,12 @@ function playRound(computerChoise, humanChoise){
     }
 
 
-const computerSelection=getComputerChoice();
-const humanSelection=getHumanChoice();
-
-playRound(computerSelection, humanSelection);
+function playGame(){
+    for (let i=1; i<=5; i++)
+        {const humanSelection = getHumanChoice();
+         const computerSelection = getComputerChoice();
+         playRound(computerSelection, humanSelection);
+         
+        }
+}
+playGame();
