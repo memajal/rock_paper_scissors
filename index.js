@@ -19,9 +19,31 @@ function getHumanChoice(){
         ("Enter one of the options:paper, rock, scissors", 
         "paper,rock,scissors");
 
-        console.log(humanChoise.toLowerCase());
+        return humanChoise.toLowerCase();
+
+        
 }
      
+function playRound(computerChoise, humanChoise){
+    if(computerChoise==humanChoise) {
+        console.log("Draw! " + computerChoise + " and " + humanChoise) ;}
 
-getComputerChoice();
-getHumanChoice();
+        else if ((computerChoise=="rock" && humanChoise=="scissors") || 
+                 (computerChoise=="paper" && humanChoise=="rock")    ||
+                 (computerChoise=="scissors" && humanChoise=="paper")) {
+            console.log("You loose! " + computerChoise + " beats " + humanChoise) ;
+        }
+
+        else if((computerChoise=="rock" && humanChoise=="paper") || 
+        (computerChoise=="paper" && humanChoise=="scissors")    ||
+        (computerChoise=="scissors" && humanChoise=="rock") )    {
+
+            console.log("You win! " + humanChoise + " beats " + computerChoise) ;
+        }     
+    }
+
+
+const computerSelection=getComputerChoice();
+const humanSelection=getHumanChoice();
+
+playRound(computerSelection, humanSelection);
