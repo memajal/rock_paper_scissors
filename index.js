@@ -32,6 +32,8 @@ function playRound(computerChoise, humanChoise){
                  (computerChoise=="paper" && humanChoise=="rock")    ||
                  (computerChoise=="scissors" && humanChoise=="paper")) {
             console.log("You loose! " + computerChoise + " beats " + humanChoise) ;
+            computerScore++;
+            console.log(computerScore + " " + humanScore);
         }
 
         else if((computerChoise=="rock" && humanChoise=="paper") || 
@@ -39,6 +41,8 @@ function playRound(computerChoise, humanChoise){
         (computerChoise=="scissors" && humanChoise=="rock") )    {
 
             console.log("You win! " + humanChoise + " beats " + computerChoise) ;
+            humanScore++;
+            console.log(computerScore + " " + humanScore);
         }     
     }
 
