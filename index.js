@@ -8,4 +8,17 @@ function getComputerChoice(){
        return computerChoise;
 }
 
+/*function to give the user the option to enter an input value of 
+rock, paper, scissors*/
+function getHumanChoice(){
+
+    let humanChoise= prompt
+        ("Enter one of the options:paper, rock, scissors", 
+        "paper,rock,scissors");
+
+        console.log(humanChoise.toLowerCase());
+}
+     
+
 getComputerChoice();
+getHumanChoice();
