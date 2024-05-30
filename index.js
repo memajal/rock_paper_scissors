@@ -18,8 +18,16 @@ function getHumanChoice(){
     let humanChoise= prompt
         ("Enter one of the options:paper, rock, scissors", 
         "paper,rock,scissors");
+
+        if((humanChoise.toLowerCase()=="paper") ||
+         (humanChoise.toLowerCase()=="rock")  ||
+         (humanChoise.toLowerCase()=="scissors"))
+ 
+         {return humanChoise.toLowerCase();  }
+
+        else console.log("Error. Please enter one of the 3 vaules: paper, rock, scissors");
         
-        return humanChoise.toLowerCase();       
+             
 }
      
 function playRound(computerChoise, humanChoise){
@@ -45,12 +53,16 @@ function playRound(computerChoise, humanChoise){
     }
 
 
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
 function playGame(){
-    for (let i=1; i<=5; i++)
+    for (let i=1; i<5; i++)
         {const humanSelection = getHumanChoice();
          const computerSelection = getComputerChoice();
          playRound(computerSelection, humanSelection);
          
         }
 }
+
 playGame();
