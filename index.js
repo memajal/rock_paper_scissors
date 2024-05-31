@@ -4,6 +4,7 @@ let computerScore=0;
 const choise=["paper", "rock", "scissors"];
 
 
+
 /* function to generate randomly paper, rock or scissors*/ 
 function getComputerChoice(){
        let computerChoise=choise[Math.floor(Math.random()*3)];
@@ -14,12 +15,13 @@ function getComputerChoice(){
 /*function to give the user the option to enter an input value of 
 rock, paper, scissors*/
 function getHumanChoice(){
-const humanChoise_buttons= document.querySelectorAll("button");
+    const humanChoise_buttons= document.querySelectorAll("button");
+
     humanChoise_buttons.forEach((button) =>{
         // add a click listener
         button.addEventListener("click", ()=> {
             console.log("Human Choise " + button.textContent);
-        });
+        });  
     });
 }
 
@@ -47,5 +49,15 @@ function playGame(humanChoise){
             humanScore++;
             console.log("Computer score: "+ computerScore + " and Human Score: " + humanScore);
             
-        }     
+        }  
+        
+        
+        if(humanScore==5)
+            {console.log("Game Ended! Congratulation! You won!"); }
+             
+
+        if (computerScore==5)
+            {console.log("Game Ended! You lost! Try Again!"); }
+        
+        
 }
