@@ -14,22 +14,19 @@ function getComputerChoice(){
 /*function to give the user the option to enter an input value of 
 rock, paper, scissors*/
 function getHumanChoice(){
-
-    let humanChoise= prompt
-        ("Enter one of the options:paper, rock, scissors", 
-        "paper,rock,scissors");
-
-        if((humanChoise.toLowerCase()=="paper") ||
-         (humanChoise.toLowerCase()=="rock")  ||
-         (humanChoise.toLowerCase()=="scissors"))
- 
-         {return humanChoise.toLowerCase();  }
-
-        else console.log("Error. Please enter one of the 3 vaules: paper, rock, scissors");
-        
-             
+const humanChoise_buttons= document.querySelectorAll("button");
+    humanChoise_buttons.forEach((button) =>{
+        // add a click listener
+        button.addEventListener("click", ()=> {
+            console.log(button.textContent);
+        });
+    });
 }
-     
+
+getComputerChoice();
+getHumanChoice();
+
+ /*    
 function playRound(computerChoise, humanChoise){
     if(computerChoise==humanChoise) {
         console.log("Draw! " + computerChoise + " and " + humanChoise) ;}
@@ -66,3 +63,4 @@ function playGame(){
 }
 
 playGame();
+*/
