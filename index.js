@@ -16,8 +16,6 @@ function getComputerChoice(){
 /*function to give the user the option to enter an input value of 
 rock, paper, scissors*/
 function getHumanChoice(){
-    
-
     humanChoise_buttons.forEach((button) =>{
         // add a click listener
         button.addEventListener("click", ()=> {
