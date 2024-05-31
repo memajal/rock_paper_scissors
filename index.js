@@ -36,51 +36,16 @@ function playGame(humanChoise){
                  (computerChoise=="paper" && humanChoise=="rock")    ||
                  (computerChoise=="scissors" && humanChoise=="paper")) {
             console.log("You loose! " + computerChoise + " beats " + humanChoise) ;
+            computerScore++;
+            console.log("Computer score: "+ computerScore + " and Human Score: " + humanScore);
         }
     
         else if((computerChoise=="rock" && humanChoise=="paper") || 
         (computerChoise=="paper" && humanChoise=="scissors")    ||
         (computerChoise=="scissors" && humanChoise=="rock") )    {
-
-            console.log("You win! " + humanChoise + " beats " + computerChoise) ;
-        }     
-}
-
- /*    
-function playRound(computerChoise, humanChoise){
-    if(computerChoise==humanChoise) {
-        console.log("Draw! " + computerChoise + " and " + humanChoise) ;}
-
-        else if ((computerChoise=="rock" && humanChoise=="scissors") || 
-                 (computerChoise=="paper" && humanChoise=="rock")    ||
-                 (computerChoise=="scissors" && humanChoise=="paper")) {
-            console.log("You loose! " + computerChoise + " beats " + humanChoise) ;
-            computerScore++;
-            console.log(computerScore + " " + humanScore);
-        }
-
-        else if((computerChoise=="rock" && humanChoise=="paper") || 
-        (computerChoise=="paper" && humanChoise=="scissors")    ||
-        (computerChoise=="scissors" && humanChoise=="rock") )    {
-
             console.log("You win! " + humanChoise + " beats " + computerChoise) ;
             humanScore++;
-            console.log(computerScore + " " + humanScore);
+            console.log("Computer score: "+ computerScore + " and Human Score: " + humanScore);
+            
         }     
-    }
-
-
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-
-function playGame(){
-    for (let i=1; i<5; i++)
-        {const humanSelection = getHumanChoice();
-         const computerSelection = getComputerChoice();
-         playRound(computerSelection, humanSelection);
-         
-        }
 }
-
-playGame();
-*/
