@@ -2,6 +2,7 @@
 let humanScore=0;
 let computerScore=0;
 const choise=["paper", "rock", "scissors"];
+const humanChoise_buttons= document.querySelectorAll("button");
 
 
 
@@ -15,7 +16,7 @@ function getComputerChoice(){
 /*function to give the user the option to enter an input value of 
 rock, paper, scissors*/
 function getHumanChoice(){
-    const humanChoise_buttons= document.querySelectorAll("button");
+    
 
     humanChoise_buttons.forEach((button) =>{
         // add a click listener
@@ -52,12 +53,15 @@ function playGame(humanChoise){
         }  
         
         
-        if(humanScore==5)
+        if((humanScore==5) ||(computerScore==5)) {
+            for(let i=0; i<3; i++)
+            {humanChoise_buttons[i].setAttribute("disabled", "");}
+
+            if(humanScore==5)
             {console.log("Game Ended! Congratulation! You won!"); }
              
-
-        if (computerScore==5)
+            if (computerScore==5)
             {console.log("Game Ended! You lost! Try Again!"); }
-        
+        }
         
 }
