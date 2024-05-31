@@ -18,13 +18,33 @@ const humanChoise_buttons= document.querySelectorAll("button");
     humanChoise_buttons.forEach((button) =>{
         // add a click listener
         button.addEventListener("click", ()=> {
-            console.log(button.textContent);
+            console.log("Human Choise " + button.textContent);
         });
     });
 }
 
-getComputerChoice();
 getHumanChoice();
+
+
+function playGame(humanChoise){
+  let computerChoise= getComputerChoice();
+
+  if(computerChoise==humanChoise) {
+    console.log("Draw! " + computerChoise + " and " + humanChoise) ;}
+  
+    else if ((computerChoise=="rock" && humanChoise=="scissors") || 
+                 (computerChoise=="paper" && humanChoise=="rock")    ||
+                 (computerChoise=="scissors" && humanChoise=="paper")) {
+            console.log("You loose! " + computerChoise + " beats " + humanChoise) ;
+        }
+    
+        else if((computerChoise=="rock" && humanChoise=="paper") || 
+        (computerChoise=="paper" && humanChoise=="scissors")    ||
+        (computerChoise=="scissors" && humanChoise=="rock") )    {
+
+            console.log("You win! " + humanChoise + " beats " + computerChoise) ;
+        }     
+}
 
  /*    
 function playRound(computerChoise, humanChoise){
