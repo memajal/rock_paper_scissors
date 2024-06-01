@@ -77,11 +77,14 @@ containerP.setAttribute("style", "text-align:center; font-size: 20px; width:80%;
 /*new div that will contain the computer choise and human choise divs */
 const choisesDiv = document.createElement("div");
 choisesDiv.id="choises";
+choisesDiv.setAttribute("style", "display:flex; justify-content:center; gap: 50px; width: 60%; margin: 50px auto;");
 container.appendChild(choisesDiv);
 
 /*computer_choise Div with image and p */
 const computerChoiseDiv=document.createElement("div");
 computerChoiseDiv.id="computer_choise";
+computerChoiseDiv.setAttribute("style", "text-align:center;")
+
 
      const computerChoiseImg=document.createElement("img");
      computerChoiseImg.id="computer_choise_img";
@@ -90,6 +93,7 @@ computerChoiseDiv.id="computer_choise";
 
      const computerChoiseP=document.createElement("p");
      computerChoiseP.textContent="Computer Choise";
+     computerChoiseP.setAttribute("style", "font-size:20px; font-weight:bold; margin-top:1px;");
 
 choisesDiv.appendChild(computerChoiseDiv);
 computerChoiseDiv.appendChild(computerChoiseImg);
@@ -98,6 +102,7 @@ computerChoiseDiv.appendChild(computerChoiseP);
 /*human_choise div with image and p */
 const humanChoiseDiv=document.createElement("div");
 humanChoiseDiv.id="human_choise";
+humanChoiseDiv.setAttribute("style", "text-align:center;")
 
     const humanChoiseImg=document.createElement("img");
     humanChoiseImg.id="human_choise_img";
@@ -106,6 +111,7 @@ humanChoiseDiv.id="human_choise";
 
     const humanChoiseP=document.createElement("p");
     humanChoiseP.textContent="Human Choise";
+    humanChoiseP.setAttribute("style", "font-size:20px; font-weight:bold; margin-top:1px;");
 
 
 choisesDiv.appendChild(humanChoiseDiv);
