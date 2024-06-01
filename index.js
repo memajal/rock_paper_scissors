@@ -79,10 +79,35 @@ const choisesDiv = document.createElement("div");
 choisesDiv.id="choises";
 container.appendChild(choisesDiv);
 
+/*computer_choise Div with image and p */
 const computerChoiseDiv=document.createElement("div");
 computerChoiseDiv.id="computer_choise";
-choisesDiv.appendChild(computerChoiseDiv);
 
+     const computerChoiseImg=document.createElement("img");
+     computerChoiseImg.id="computer_choise_img";
+     computerChoiseImg.src="";
+     computerChoiseImg.setAttribute("style", "width:200px; height:200px; background-color:blue; alt:Computer Choise")
+
+     const computerChoiseP=document.createElement("p");
+     computerChoiseP.textContent="Computer Choise";
+
+choisesDiv.appendChild(computerChoiseDiv);
+computerChoiseDiv.appendChild(computerChoiseImg);
+computerChoiseDiv.appendChild(computerChoiseP);
+
+/*human_choise div with image and p */
 const humanChoiseDiv=document.createElement("div");
 humanChoiseDiv.id="human_choise";
+
+    const humanChoiseImg=document.createElement("img");
+    humanChoiseImg.id="human_choise_img";
+    humanChoiseImg.src="";
+    humanChoiseImg.setAttribute("style", "width:200px; height:200px; background-color:blue; alt:human Choise")
+
+    const humanChoiseP=document.createElement("p");
+    humanChoiseP.textContent="Human Choise";
+
+
 choisesDiv.appendChild(humanChoiseDiv);
+humanChoiseDiv.appendChild(humanChoiseImg);
+humanChoiseDiv.appendChild(humanChoiseP);
