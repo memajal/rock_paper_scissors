@@ -1,4 +1,3 @@
-
 let humanScore=0;
 let computerScore=0;
 const choise=["paper", "rock", "scissors"];
@@ -74,6 +73,7 @@ containerH1.setAttribute("style", "text-align:center; color: blue;");
 const containerP= container.querySelector("p");
 containerP.setAttribute("style", "text-align:center; font-size: 20px; width:80%; margin:auto 10%; font-style:italic;");
 
+
 /*new div that will contain the computer choise and human choise divs */
 const choisesDiv = document.createElement("div");
 choisesDiv.id="choises";
@@ -86,5 +86,3 @@ choisesDiv.appendChild(computerChoiseDiv);
 const humanChoiseDiv=document.createElement("div");
 humanChoiseDiv.id="human_choise";
 choisesDiv.appendChild(humanChoiseDiv);
-
-
