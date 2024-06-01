@@ -33,22 +33,22 @@ function playGame(humanChoise){
   computerChoiseImg.src=`images/${computerChoise}.png`;
 
   if(computerChoise==humanChoise) {
-    console.log("Draw! " + computerChoise + " and " + humanChoise) ;}
+    resultP1.textContent="Draw! " + computerChoise + " and " + humanChoise ;}
   
     else if ((computerChoise=="rock" && humanChoise=="scissors") || 
                  (computerChoise=="paper" && humanChoise=="rock")    ||
                  (computerChoise=="scissors" && humanChoise=="paper")) {
-            console.log("You loose! " + computerChoise + " beats " + humanChoise) ;
+                    resultP1.textContent="You loose! " + computerChoise + " beats " + humanChoise;
             computerScore++;
-            console.log("Computer score: "+ computerScore + " and Human Score: " + humanScore);
+            resultP2.textContent="Computer score: "+ computerScore + " and Human Score: " + humanScore;
         }
     
         else if((computerChoise=="rock" && humanChoise=="paper") || 
         (computerChoise=="paper" && humanChoise=="scissors")    ||
         (computerChoise=="scissors" && humanChoise=="rock") )    {
-            console.log("You win! " + humanChoise + " beats " + computerChoise) ;
+            resultP1.textContent="You win! " + humanChoise + " beats " + computerChoise ;
             humanScore++;
-            console.log("Computer score: "+ computerScore + " and Human Score: " + humanScore);
+            resultP2.textContent="Computer score: "+ computerScore + " and Human Score: " + humanScores;
             
         }  
         
@@ -58,10 +58,10 @@ function playGame(humanChoise){
             {humanChoise_buttons[i].setAttribute("disabled", "");}
 
             if(humanScore==5)
-            {console.log("Game Ended! Congratulation! You won!"); }
+            {resultP3.textContent="Game Ended! Congratulation! You won!"; }
              
             if (computerScore==5)
-            {console.log("Game Ended! You lost! Try Again!"); }
+            {resultP3.textContent="Game Ended! You lost! Try Again!"; }
         }
         
 }
@@ -82,6 +82,28 @@ const choisesDiv = document.createElement("div");
 choisesDiv.id="choises";
 choisesDiv.setAttribute("style", "display:flex; justify-content:center; gap: 50px; width: 60%; margin: 50px auto;");
 container.appendChild(choisesDiv);
+
+/*new div that will contaim the results*/
+const resultDiv = document.createElement("div");
+resultDiv.id="result";
+resultDiv.setAttribute("style", "text-align:center; font-size:20px; font-weight:bold");
+container.appendChild(resultDiv);
+
+const resultP1=document.createElement("p");
+resultP1.id="result";
+resultP1.textContent=" ";
+resultDiv.appendChild(resultP1);
+
+const resultP2=document.createElement("p");
+resultP2.id="score";
+resultP2.textContent="Computer Score: 0 and Human Score: 0";
+resultDiv.appendChild(resultP2);
+
+const resultP3=document.createElement("p");
+resultP3.id="game_end"
+resultP3.textContent="";
+resultDiv.appendChild(resultP3);
+
 
 /*computer_choise Div with image and p */
 const computerChoiseDiv=document.createElement("div");
