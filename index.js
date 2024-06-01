@@ -2,6 +2,8 @@ let humanScore=0;
 let computerScore=0;
 const choise=["paper", "rock", "scissors"];
 const humanChoise_buttons= document.querySelectorAll("button");
+for (let i=0; i<3; i++){
+humanChoise_buttons[i].setAttribute("style", "border:5px solid white; padding: 15px; color:white; background-color:blue");}
 
 
 
@@ -48,24 +50,34 @@ function playGame(humanChoise){
         (computerChoise=="scissors" && humanChoise=="rock") )    {
             resultP1.textContent="You win! " + humanChoise + " beats " + computerChoise ;
             humanScore++;
-            resultP2.textContent="Computer score: "+ computerScore + " and Human Score: " + humanScores;
+            resultP2.textContent="Computer score: "+ computerScore + " and Human Score: " + humanScore;
             
         }  
         
         
         if((humanScore==5) ||(computerScore==5)) {
             for(let i=0; i<3; i++)
-            {humanChoise_buttons[i].setAttribute("disabled", "");}
+            {humanChoise_buttons[i].setAttribute("disabled", "")
+            humanChoise_buttons[i].style.backgroundColor="grey";
+
+            }
 
             if(humanScore==5)
-            {resultP3.textContent="Game Ended! Congratulation! You won!"; }
+            {resultP3.textContent="Game Ended! Congratulation! You won!"; 
+                resultP3.style.color="green";
+            }
              
             if (computerScore==5)
-            {resultP3.textContent="Game Ended! You lost! Try Again!"; }
+            {resultP3.textContent="Game Ended! You lost! Try Again!"; 
+            resultP3.style.color="red";
+            }
         }
         
 }
 
+/* */
+const selectionContainer=document.querySelector("#selection_container");
+selectionContainer.setAttribute("style", "text-align:center; margin-top:30px");
 
 /* index.html style with javascript */
 
