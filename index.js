@@ -17,8 +17,10 @@ rock, paper, scissors*/
 function getHumanChoice(){
     humanChoise_buttons.forEach((button) =>{
         // add a click listener
-        button.addEventListener("click", ()=> {
+            button.addEventListener("click", ()=> {
             console.log("Human Choise " + button.textContent);
+            const humanChoiseImgAtribute= `images/${button.textContent}.png`; 
+            humanChoiseImg.src=humanChoiseImgAtribute;
         });  
     });
 }
@@ -28,6 +30,7 @@ getHumanChoice();
 
 function playGame(humanChoise){
   let computerChoise= getComputerChoice();
+  computerChoiseImg.src=`images/${computerChoise}.png`;
 
   if(computerChoise==humanChoise) {
     console.log("Draw! " + computerChoise + " and " + humanChoise) ;}
@@ -88,7 +91,6 @@ computerChoiseDiv.setAttribute("style", "text-align:center;")
 
      const computerChoiseImg=document.createElement("img");
      computerChoiseImg.id="computer_choise_img";
-     computerChoiseImg.src="";
      computerChoiseImg.setAttribute("style", "width:200px; height:200px; background-color:blue; alt:Computer Choise")
 
      const computerChoiseP=document.createElement("p");
@@ -106,7 +108,6 @@ humanChoiseDiv.setAttribute("style", "text-align:center;")
 
     const humanChoiseImg=document.createElement("img");
     humanChoiseImg.id="human_choise_img";
-    humanChoiseImg.src="";
     humanChoiseImg.setAttribute("style", "width:200px; height:200px; background-color:blue; alt:human Choise")
 
     const humanChoiseP=document.createElement("p");
